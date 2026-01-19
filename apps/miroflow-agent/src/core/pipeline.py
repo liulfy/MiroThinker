@@ -95,6 +95,7 @@ async def execute_task_pipeline(
         # Initialize LLM client
         random_uuid = str(uuid.uuid4())
         unique_id = f"{task_id}-{random_uuid}"
+        # 这就是client，在里面配置模型的url和key
         llm_client = ClientFactory(task_id=unique_id, cfg=cfg, task_log=task_log)
 
         # Initialize orchestrator
